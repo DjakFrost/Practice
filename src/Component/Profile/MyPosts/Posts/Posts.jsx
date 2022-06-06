@@ -2,12 +2,13 @@ import React from "react";
 import classes from "./Posts.module.css";
 
 
-const Posts = () => {
+const Posts = (pro) => {
+
     return <div className={classes.item}>
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkAOCTMsRRjRWRQmZQB9geVQmynJHyQI8G1w&usqp=CAU'/>
-        post 1
+        {pro.message}
         <div>
-        <span>like</span>
+        <span>like {pro.like}</span>
         </div>
             </div>
 }
