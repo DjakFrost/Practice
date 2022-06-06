@@ -13,18 +13,5 @@ ul li {
   grid-template-columns: 2fr 10fr;
   /*grid-gap: 10px;*/
 }
-.Header{
-  grid-area: h;
-  background-color: grey;
-}
-.Header img{
-  width: 80px;
-}
-.Navbar{
-  grid-area: n;
-  background-color: darkgray;
-}
-.Profile{
-  grid-area: c;
-  background-color: dimgrey;
-}
+
+
