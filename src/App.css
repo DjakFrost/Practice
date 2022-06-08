@@ -1,21 +1,21 @@
 ul li {
-  list-style-type: -moz-oriya;
+    list-style-type: -moz-oriya;
 }
 
 .app-wrapper {
-  margin: 0 auto;
-  display: grid;
-  width: 1200px;
-  grid-template-areas:
+    margin: 0 auto;
+    display: grid;
+    width: 1200px;
+    grid-template-areas:
 "h h"
 "n c";
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-  /*grid-gap: 10px;*/
-}
-.app-wrapper-content {
-  grid-area: c;
-  background-color: dimgrey;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    /*grid-gap: 10px;*/
 }
 
+.app-wrapper-content {
+    grid-area: c;
+    background-color: dimgrey;
+}
 

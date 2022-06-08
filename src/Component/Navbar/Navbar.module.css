@@ -1,4 +1,4 @@
-.Navbar {
+.navbar {
     grid-area: n;
     background-color: #212121;
 }
@@ -6,7 +6,6 @@
 .item {
     color: white;
 }
-
-.item.active{
-    color: brown;
+.active {
+    color: aquamarine;
 }
