@@ -11,13 +11,13 @@ const Navbar = () => {
             <NavLink to='/Dialogs' className={navData=>navData.isActive ? classes.active :classes.item}>Messages</NavLink>
         </div>
         <div>
-            <NavLink to='News' className={navData=>navData.isActive ? classes.active :classes.item}>News</NavLink>
+            <NavLink to='/News' className={navData=>navData.isActive ? classes.active :classes.item}>News</NavLink>
         </div>
         <div>
-            <NavLink to='Music' className={navData=>navData.isActive ? classes.active :classes.item}>Music</NavLink>
+            <NavLink to='/Music' className={navData=>navData.isActive ? classes.active :classes.item}>Music</NavLink>
         </div>
         <div>
-            <NavLink to='Settings' className={navData=>navData.isActive ? classes.active :classes.item}>Settings</NavLink>
+            <NavLink to='/Settings' className={navData=>navData.isActive ? classes.active :classes.item}>Settings</NavLink>
         </div>
     </nav>
 }
