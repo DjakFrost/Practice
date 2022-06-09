@@ -1,39 +1,47 @@
 import React from "react";
 import s from "./Dialogs.module.css";
-import {NavLink} from "react-router-dom";
+import Message from "./Message/Message";
+import DialogItem from "./DialogItem/DialogsItem";
 
-const DialogItem = (props) => {
-    let path = '/Dialogs/' + props.id
-    return (
-        <div className={s.dialog + ' ' + s.active}>
-            <NavLink to={path}>{props.name}</NavLink>
-            </div>
-            )
-}
 
-const Message = (props) => {
-    return(
-        <div className={s.dialog}>{props.message}</div>
-)
-}
 
 const Dialogs = () => {
+
+    let dialogs = [
+        {id: 0, name: "Vadim"},
+        {id: 1, name: 'Kolya'},
+        {id: 2, name: 'Egor'},
+        {id: 3, name: 'Ronin'},
+        {id: 4, name: 'Cocker'},
+        {id: 5, name: 'Nekto'}
+    ]
+
+    let dialogElements = dialogs
+        .map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)
+
+    let message = [
+        {id: 0, message: "Hi all"},
+        {id: 1, message: "Hi bro, how are you"},
+        {id: 2, message: "vzzzzz"},
+        {id: 3, message: "..."},
+        {id: 4, message: "34"},
+        {id: 5, message: "234"}
+    ]
+
+    let messagesElements = message
+        .map(message => <Message message={message.message} id={message.id}/>)
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <DialogItem name ='Vadim' id='1'/>
-                <DialogItem name ='Kolya' id='2'/>
-                <DialogItem name ='Egor' id='3'/>
-                <DialogItem name ='Ronin' id='4'/>
-                <DialogItem name ='Cocker' id='5'/>
-                <DialogItem name ='Nekto228' id='6'/>
+                    {dialogElements}
             </div>
             <div className={s.message}>
-                <Message message = 'Hi all'/>
-                <Message message = 'Hi bro, how are you'/>
-                <Message message = 'vzzzzz'/>
+                {messagesElements}
             </div>
         </div>
     )
 }
+
+
 export default Dialogs;

@@ -5,16 +5,16 @@
 
 .dialogsItems {
     padding: 10px;
+    color: burlywood;
 }
-.dialog.active {
-    color: chartreuse;
+.item {
+    color: darkslategray;
+}
+
+.active {
+    color: aqua;
 }
 
 .message {
     padding: 10px;
-}
-
-.message.message {
-
-
 }
