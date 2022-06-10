@@ -2,13 +2,9 @@ import React from "react";
 import s from "./MyPosts.module.css";
 import Posts from "./Posts/Posts";
 
-
 const MyPosts = (props) => {
-
-
-    let postElements = props.posts
+    let postsElement = props.posts.posts
         .map(p => <Posts message={p.message} likesCount={p.likesCount}/>)
-
     return <div className={s.postsBlock}>
         <h1>My post</h1>
         <div>
@@ -20,7 +16,7 @@ const MyPosts = (props) => {
             <button>Remove</button>
         </div>
         <div className={s.posts}>
-            {postElements}
+            {postsElement}
         </div>
     </div>
 }
