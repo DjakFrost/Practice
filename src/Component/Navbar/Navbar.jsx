@@ -1,23 +1,21 @@
 import React from "react";
-import classes from "./Navbar.module.css";
+import s from "./Navbar.module.css";
 import {NavLink} from "react-router-dom";
+import Friend from "./Friend/Friend";
 
-const Navbar = () => {
-    return <nav className={classes.navbar}>
+const Navbar = (props) => {
+    let userList = props.state.dialogs
+        .map(u=><Friend id={u.id} name={u.name} avatar={u.avatar}/>)
+    return <nav className={s.navbar}>
         <div>
-            <NavLink to='/Profile' className={navData=>navData.isActive ? classes.active :classes.item}>Profile</NavLink>
+            <NavLink to='/Profile' className={navData=>navData.isActive ? s.active :s.item}>Profile</NavLink>
         </div>
         <div>
-            <NavLink to='/Dialogs' className={navData=>navData.isActive ? classes.active :classes.item}>Messages</NavLink>
+            <NavLink to='/Dialogs' className={navData=>navData.isActive ? s.active :s.item}>Messages</NavLink>
         </div>
-        <div>
-            <NavLink to='/News' className={navData=>navData.isActive ? classes.active :classes.item}>News</NavLink>
-        </div>
-        <div>
-            <NavLink to='/Music' className={navData=>navData.isActive ? classes.active :classes.item}>Music</NavLink>
-        </div>
-        <div>
-            <NavLink to='/Settings' className={navData=>navData.isActive ? classes.active :classes.item}>Settings</NavLink>
+        <div className={s.listText}>
+            MyFriend:
+            {userList}
         </div>
     </nav>
 }

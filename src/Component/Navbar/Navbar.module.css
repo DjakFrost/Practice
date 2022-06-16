@@ -9,3 +9,8 @@
 .active {
     color: aquamarine;
 }
+.listText {
+    font-size: 20px;
+    color: chartreuse;
+    padding-top: 40px;
+}

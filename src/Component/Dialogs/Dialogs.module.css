@@ -2,6 +2,15 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
+.dialogs img{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+}
+.dialogs.button {
+    height: 20px;
+    width: 20px;
+}
 
 .dialogsItems {
     padding: 10px;
