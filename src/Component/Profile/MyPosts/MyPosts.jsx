@@ -3,7 +3,6 @@ import s from "./MyPosts.module.css";
 import Posts from "./Posts/Posts";
 
 const MyPosts = (props) => {
-    debugger
     let postsElement = props.posts.posts
         .map(p => <Posts message={p.message} likesCount={p.likesCount}/>)
 

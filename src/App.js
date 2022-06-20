@@ -6,7 +6,6 @@ import Navbar from "./Component/Navbar/Navbar";
 import Profile from "./Component/Profile/Profile";
 import Dialogs from "./Component/Dialogs/Dialogs";
 import {Routes, Route} from "react-router-dom";
-import {updateNewMessageText} from "./Redux/state";
 
 
 const App = (props) => {
