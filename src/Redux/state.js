@@ -52,7 +52,6 @@ let state = {
             newMessageText: 'hello'
         }
 }
-window.state = state
 export let addPost = () => {
     let newPost = {
         id: 3,
@@ -80,7 +79,7 @@ export let updateNewMessageText = (newText) => {
     rerenderEntireTree()
     }
 
-export const subscribe = (observer) => {///observer
+export const subscribe = (observer) => {
     rerenderEntireTree = observer
 }
 
