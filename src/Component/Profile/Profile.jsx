@@ -4,14 +4,14 @@ import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 
 
+
 const Profile = (props) => {
 
     return <div>
         <ProfileInfo/>
         <MyPosts posts={props.profile}
-                 addPost={props.addPost}
                  newPostText={props.profile.newPostText}
-                 updateNewPostText={props.updateNewPostText}/>
+                 dispatch={props.dispatch}/>
     </div>
 }
 export default Profile;
