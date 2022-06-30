@@ -1,46 +1,31 @@
 import React from "react";
-import s from "./Dialogs.module.css";
-import DialogItem from "./DialogItem/DialogsItem";
-import Message from "./Message/Message";
 import {addMessageActionCreate, updateNewMessageTextActionCreator} from "../../Redux/messagesPage-Reduser";
+import Dialogs from "./Dialogs";
+import StoreContext from "../../StoreContext";
 
 
+const DialogsContainer = () => {
 
+    return <StoreContext.Consumer>
+        {
+            (store) => {
 
-const Dialogs = (props) => {
-    let newMessage = React.createRef()
-    let onMessageChange = () => {
-        let text = newMessage.current.value
-        props.dispatch(updateNewMessageTextActionCreator(text))
+            let state = store.getState().messagesPage
+
+            let onNewMessageChange = (newMessage) => {
+                store.dispatch(updateNewMessageTextActionCreator(newMessage))
+            }
+            let addMessage = () => {
+                store.dispatch(addMessageActionCreate())
+            }
+            return <Dialogs
+                updateNewMessageTextActionCreator={onNewMessageChange}
+                addMessageClick={addMessage}
+                dialogs={state.dialogs}
+                message={state.message}
+                newMessageText={state.newMessageText}/>
+        }
     }
-    let addMessage = () => {
-        let text = newMessage.current.value
-        props.dispatch(addMessageActionCreate(text))
-    }
-
-    let messageUser = props.state.message
-        .map(d => <Message message={d.message} id={d.id}/>)
-
-    let dialogElements = props.state.dialogs
-        .map(d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>)
-
-    return (
-        <div className={s.dialogs}>
-            <div className={s.dialogsItems}>
-                {dialogElements}
-            </div>
-            <div className={s.dialogsItems}>
-                {messageUser}
-
-                <div className={s.button}>
-                    <textarea onChange={onMessageChange} ref={newMessage} value={props.state.newMessageText}></textarea>
-                    <div>
-                        <button onClick={addMessage}>Add message</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    )
+    </StoreContext.Consumer>
 }
-export default Dialogs;
+export default DialogsContainer;

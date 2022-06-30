@@ -8,20 +8,21 @@ import {addMessageActionCreate, updateNewMessageTextActionCreator} from "../../R
 
 
 const Dialogs = (props) => {
+    debugger
     let newMessage = React.createRef()
-    let onMessageChange = () => {
+
+    let onNewMessageChange = () => {
         let text = newMessage.current.value
-        props.dispatch(updateNewMessageTextActionCreator(text))
-    }
-    let addMessage = () => {
-        let text = newMessage.current.value
-        props.dispatch(addMessageActionCreate(text))
+        props.updateNewMessageTextActionCreator(text)}
+
+    let addMessageClick = () => {
+        props.addMessageClick()
     }
 
-    let messageUser = props.state.message
+    let messageUser = props.message
         .map(d => <Message message={d.message} id={d.id}/>)
 
-    let dialogElements = props.state.dialogs
+    let dialogElements = props.dialogs
         .map(d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>)
 
     return (
@@ -33,9 +34,9 @@ const Dialogs = (props) => {
                 {messageUser}
 
                 <div className={s.button}>
-                    <textarea onChange={onMessageChange} ref={newMessage} value={props.state.newMessageText}></textarea>
+                    <textarea onChange={onNewMessageChange} ref={newMessage} value={props.newMessageText}></textarea>
                     <div>
-                        <button onClick={addMessage}>Add message</button>
+                        <button onClick={addMessageClick}>Add message</button>
                     </div>
 
                 </div>
