@@ -5,7 +5,6 @@ import {connect} from "react-redux";
 
 
 let mapStateToProps = (state) => {
-    debugger
     return {
         dialogs:state.messagesPage.dialogs,
         message:state.messagesPage.message,

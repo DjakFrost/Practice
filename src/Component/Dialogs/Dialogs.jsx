@@ -8,7 +8,6 @@ import {addMessageActionCreate, updateNewMessageTextActionCreator} from "../../R
 
 
 const Dialogs = (props) => {
-    debugger
     let newMessage = React.createRef()
 
     let onNewMessageChange = () => {
