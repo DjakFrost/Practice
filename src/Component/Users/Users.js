@@ -3,7 +3,6 @@ import styles from "./Users.module.css";
 import UserImage from "../../assets/images/UserImage.png";
 
 let Users = (props) => {
-
     let pageCount = Math.ceil(props.totalUsersCount / props.pageSize)
 
     let page = []
@@ -29,14 +28,14 @@ let Users = (props) => {
                         <img src={u.photos.small != null ? u.photos.small : UserImage} className={styles.photo}/>
                     </div>
                     <div>
-                        {u.followed
-                            ? <button onClick={() => {
-                                props.follow(u.id)
-                            }}>Follow</button>
-                            : <button onClick={() => {
-                                props.unFollow(u.id)
-                            }}>Unfollow</button>
-                        }
+                          {u.followed
+                              ? <button onClick={() => {
+                                  props.unFollow(u.id)
+                              }}>Follow</button>
+                              : <button onClick={() => {
+                                 props.follow(u.id)
+                              }}>Unfollow</button>
+                          }
                     </div>
                 </span>
 
