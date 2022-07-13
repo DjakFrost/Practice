@@ -1,8 +1,12 @@
-img {
+.background {
     width: 1000px;
     height: 160px;
-}re
-
+}
 .descriptionBlock {
     margin: 12px;
+}
+.aboutMe {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
 }
