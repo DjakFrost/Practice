@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Users.module.css";
 import UserImage from "../../assets/images/UserImage.png";
 import {NavLink} from "react-router-dom";
+import {usersAPI} from "../../API/api";
 
 let Users = (props) => {
     let pageCount = Math.ceil(props.totalUsersCount / props.pageSize)
@@ -33,23 +34,32 @@ let Users = (props) => {
                     <div>
                           {u.followed
                               ? <button onClick={() => {
-                                  props.unFollow(u.id)
-                              }}>Follow</button>
-                              : <button onClick={() => {
-                                 props.follow(u.id)
+                                  usersAPI.deleteFollow(u.id)
+                                      .then(data => {
+                                          if (data.resultCode === 0) {
+                                              props.unFollow(u.id)
+                                          }
+                                      })
                               }}>Unfollow</button>
-                          }
-                    </div>
-                </span>
+                              : <button onClick={() => {
+                                  usersAPI.postFollow(u.id)
+                                      .then(data => {
+                                          if (data.resultCode === 0) {
+                                              props.follow(u.id)
+                                          }
+                                      })
+                              }}>Follow</button>}
+                              </div>
+                              </span>
 
                 <span>
-                    <span>
-                        <div>{u.name}</div><div>{u.status}</div>
-                    </span>
-                    <span>
-                        <div>{"u.location.country"}</div><div>{"u.location.city"}</div>
-                    </span>
-                </span>
+                              <span>
+                              <div>{u.name}</div><div>{u.status}</div>
+                              </span>
+                              <span>
+                              <div>{"u.location.country"}</div><div>{"u.location.city"}</div>
+                              </span>
+                              </span>
 
             </div>)
         }
