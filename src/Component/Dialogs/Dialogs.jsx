@@ -2,9 +2,7 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
-import {addMessageActionCreate, updateNewMessageTextActionCreator} from "../../Redux/messagesPage-Reduser";
-
-
+import { Navigate } from "react-router-dom"
 
 
 const Dialogs = (props) => {
@@ -23,6 +21,8 @@ const Dialogs = (props) => {
 
     let dialogElements = props.dialogs
         .map(d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>)
+
+    if(!props.isAuth) return <Navigate to= "/login"/>
 
     return (
         <div className={s.dialogs}>

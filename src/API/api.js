@@ -35,3 +35,12 @@ export const usersAPI = {
                 return response.data}
             )    }
 }
+
+export const authAPI = {
+    headerAuth(){
+        return instance(`auth/me`)
+            .then(response=>{
+                return response.data
+            })
+    }
+}
