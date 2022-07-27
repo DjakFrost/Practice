@@ -2,18 +2,14 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
-import { Navigate } from "react-router-dom"
+import {Navigate} from "react-router-dom"
+import AddMessageForm from "./Message/AddMessageForm";
 
 
 const Dialogs = (props) => {
-    let newMessage = React.createRef()
 
-    let onNewMessageChange = () => {
-        let text = newMessage.current.value
-        props.updateNewMessageTextActionCreator(text)}
-
-    let addMessageClick = () => {
-        props.addMessageClick()
+    let addMessageClick = (values) => {
+        props.addMessageClick(values.newMessageBody)
     }
 
     let messageUser = props.message
@@ -22,7 +18,7 @@ const Dialogs = (props) => {
     let dialogElements = props.dialogs
         .map(d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>)
 
-    if(!props.isAuth) return <Navigate to= "/login"/>
+    if (!props.isAuth) return <Navigate to="/login"/>
 
     return (
         <div className={s.dialogs}>
@@ -33,9 +29,9 @@ const Dialogs = (props) => {
                 {messageUser}
 
                 <div className={s.button}>
-                    <textarea onChange={onNewMessageChange} ref={newMessage} value={props.newMessageText}></textarea>
+
                     <div>
-                        <button onClick={addMessageClick}>Add message</button>
+                        <AddMessageForm onSubmit={addMessageClick}/>
                     </div>
 
                 </div>
@@ -43,4 +39,8 @@ const Dialogs = (props) => {
         </div>
     )
 }
+
+
+
+
 export default Dialogs;

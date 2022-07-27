@@ -1,4 +1,3 @@
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 const ADD_MESSAGE = 'ADD-MESSAGE'
 
 let initialState = {
@@ -37,8 +36,7 @@ let initialState = {
                 {id: 3, message: "..."},
                 {id: 4, message: "34"},
                 {id: 5, message: "234"}
-            ],
-            newMessageText: 'hello'
+            ]
 }
 
 export const messagesPageReducer = (state = initialState, action) => {
@@ -47,17 +45,10 @@ export const messagesPageReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case ADD_MESSAGE:
-            let text = state.newMessageText
+            let text = action.newMessageBody
             return stateCopy = {
                 ...state,
-                newMessageText: '',
                 message: [...state.message, {id: 6, message: text}]
-            }
-
-        case UPDATE_NEW_MESSAGE_TEXT:
-            return stateCopy = {
-                ...state,
-                newMessageText: action.newMessage
             }
 
             default:
@@ -65,5 +56,4 @@ export const messagesPageReducer = (state = initialState, action) => {
     }
 }
 
-export const addMessageActionCreate = () => ({type: ADD_MESSAGE})
-export const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newMessage: text})
+export const addMessageActionCreate = (newMessageBody) => ({type: ADD_MESSAGE, newMessageBody})
