@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, {Suspense} from "react";
 import './App.css';
 import Navbar from "./Component/Navbar/Navbar";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
@@ -33,7 +33,7 @@ class App extends React.Component {
                 <HeaderContainer/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Suspense fallback={<div>wait pls</div>}>
+                    <Suspense fallback={<Preloader/>}>
                     <Routes>
                         <Route path='/dialogs/*' element={<DialogsContainer/>}/>
                         <Route path='/profile/:userId/*' element={<ProfileContainer/>}/>
