@@ -10,3 +10,9 @@
     font-weight: bold;
     padding: 15px;
 }
+.profileImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 40px;
+}

@@ -2,46 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f062b404-69f9-489d-bafc-ccb45d48f730" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/my-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/Common/Preloader/Preloader.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Common/Preloader/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Common/Preloader/Preloader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/AlexAndAsh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/Corey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/Dalls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/Irvin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/Loaders.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/Mark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/Russel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/Tony (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/aubrey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/brandon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/carl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/charlie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/dennis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/don-juan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/earl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/graham.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/jake.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/jones.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/louie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/nigel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/oscar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/peter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/phil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/rami.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/rasmus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/richard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/richter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/rick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/rufus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/ted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/tony.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/willem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/zack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Profile/MyPosts/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Profile/MyPosts/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Profile/MyPosts/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Profile/MyPosts/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +80,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660056739800</updated>
-      <workItem from="1660056742610" duration="8660000" />
+      <workItem from="1660056742610" duration="18785000" />
+      <workItem from="1660149981770" duration="5273000" />
     </task>
     <servers />
   </component>
