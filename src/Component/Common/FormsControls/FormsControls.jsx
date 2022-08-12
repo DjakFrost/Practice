@@ -21,7 +21,7 @@ export const Textarea = Element('textarea')
 export const Input = Element('input')
 
 
-export const creteField = (placeholder, name, component, validate, type, text ="",props ={}) =>
+export const buildField = (placeholder, name, component, validate, type, text ="", props ={}) =>
     <div>
         <Field placeholder={placeholder}
                name={name}

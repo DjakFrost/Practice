@@ -1,6 +1,6 @@
 import React from "react";
-import {Field, reduxForm} from "redux-form";
-import {creteField, Input} from "../Common/FormsControls/FormsControls";
+import {reduxForm} from "redux-form";
+import {buildField, Input} from "../Common/FormsControls/FormsControls";
 import {required} from "../../Utils/validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../Redux/auth-reducer";
@@ -11,9 +11,9 @@ import s from "../Common/FormsControls/FormsControls.module.css"
 const LoginForm = ({handleSubmit, error}) => {
 
     return <form onSubmit={handleSubmit}>
-        {creteField('Email', 'email', Input, [required])}
-        {creteField('Password', 'password', Input, [required], 'password')}
-        {creteField(null, 'rememberMe', Input, null, 'checkbox', "remember me")}
+        {buildField('Email', 'email', Input, [required])}
+        {buildField('Password', 'password', Input, [required], 'password')}
+        {buildField(null, 'rememberMe', Input, null, 'checkbox', "remember me")}
         
         {error && <div className={s.formSummaryError}>
             {error}
