@@ -13,10 +13,10 @@ const Dialogs = (props) => {
     }
 
     let messageUser = props.message
-        .map(d => <Message message={d.message} id={d.id}/>)
+        .map(d => <Message  key = {d.id} message={d.message} id={d.id}/>)
 
     let dialogElements = props.dialogs
-        .map(d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>)
+        .map(d => <DialogItem key = {d.id} name={d.name} id={d.id} avatar={d.avatar}/>)
 
     if (!props.isAuth) return <Navigate to="/login"/>
 

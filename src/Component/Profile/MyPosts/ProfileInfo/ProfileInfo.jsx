@@ -6,7 +6,7 @@ import UserImage from "../../../../assets/images/UserImage.png"
 import ProfileDataForm from "./ProfileDataForm";
 
 
-const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
     let [editMode, setEditMode] = useState(false)
 
 
@@ -19,20 +19,24 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
             savePhoto(e.target.files[0])
         }
     }
+    const onSubmit = (formData) => {
+        saveProfile(formData).then(
+            () => {
+                setEditMode(false)
+            })
+    }
+
     return <div>
         <div className={s.descriptionBlock}>
             <img className={s.profileImg} src={profile.photos.large || UserImage}/>
             {isOwner && <input type={"file"} onChange={myAvatarPicturesSelected}/>}
-            {editMode ? <ProfileDataForm profile={profile}/>
-                      : <ProfileData toEditMode={() => {setEditMode(true)}} profile={profile} isOwner={isOwner}/>}
+            {editMode ? <ProfileDataForm initialValues={profile} onSubmit={onSubmit} profile={profile}/>
+                : <ProfileData toEditMode={() => {
+                    setEditMode(true)
+                }} profile={profile} isOwner={isOwner}/>}
 
 
             <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
-
-            <div>
-                <span className={s.aboutMe}>{profile.aboutMe}</span>
-            </div>
-
         </div>
     </div>
 }
@@ -64,7 +68,6 @@ const ProfileData = ({profile, isOwner, toEditMode}) => {
         </div>
     </div>
 }
-
 
 
 const Contact = ({contactsTitle, contactValue}) => {
