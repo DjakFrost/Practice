@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Practice/static/css/main.6c3824bb.css",
-    "main.js": "/Practice/static/js/main.af7f68a7.js",
-    "static/css/628.1ac531e7.chunk.css": "/Practice/static/css/628.1ac531e7.chunk.css",
-    "static/js/628.d69d8993.chunk.js": "/Practice/static/js/628.d69d8993.chunk.js",
-    "static/css/488.fdb7eb64.chunk.css": "/Practice/static/css/488.fdb7eb64.chunk.css",
-    "static/js/488.fc7980f4.chunk.js": "/Practice/static/js/488.fc7980f4.chunk.js",
+    "main.css": "/Practice/static/css/main.7504b347.css",
+    "main.js": "/Practice/static/js/main.6ffa09c4.js",
+    "static/css/628.ab2cbd16.chunk.css": "/Practice/static/css/628.ab2cbd16.chunk.css",
+    "static/js/628.2c8374e3.chunk.js": "/Practice/static/js/628.2c8374e3.chunk.js",
+    "static/css/488.3a463cc3.chunk.css": "/Practice/static/css/488.3a463cc3.chunk.css",
+    "static/js/488.ff06946c.chunk.js": "/Practice/static/js/488.ff06946c.chunk.js",
     "static/media/UserImage.png": "/Practice/static/media/UserImage.220b2c0b17a2de04fbdf.png",
-    "static/media/Loaders.svg": "/Practice/static/media/Loaders.fbbfe33606835357a1d59a4f67096356.svg",
+    "static/media/Loaders.svg": "/Practice/static/media/Loaders.6b477021a43b37e5ed763d481398da26.svg",
     "index.html": "/Practice/index.html",
-    "main.6c3824bb.css.map": "/Practice/static/css/main.6c3824bb.css.map",
-    "main.af7f68a7.js.map": "/Practice/static/js/main.af7f68a7.js.map",
-    "628.1ac531e7.chunk.css.map": "/Practice/static/css/628.1ac531e7.chunk.css.map",
-    "628.d69d8993.chunk.js.map": "/Practice/static/js/628.d69d8993.chunk.js.map",
-    "488.fdb7eb64.chunk.css.map": "/Practice/static/css/488.fdb7eb64.chunk.css.map",
-    "488.fc7980f4.chunk.js.map": "/Practice/static/js/488.fc7980f4.chunk.js.map"
+    "main.7504b347.css.map": "/Practice/static/css/main.7504b347.css.map",
+    "main.6ffa09c4.js.map": "/Practice/static/js/main.6ffa09c4.js.map",
+    "628.ab2cbd16.chunk.css.map": "/Practice/static/css/628.ab2cbd16.chunk.css.map",
+    "628.2c8374e3.chunk.js.map": "/Practice/static/js/628.2c8374e3.chunk.js.map",
+    "488.3a463cc3.chunk.css.map": "/Practice/static/css/488.3a463cc3.chunk.css.map",
+    "488.ff06946c.chunk.js.map": "/Practice/static/js/488.ff06946c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c3824bb.css",
-    "static/js/main.af7f68a7.js"
+    "static/css/main.7504b347.css",
+    "static/js/main.6ffa09c4.js"
   ]
 }
