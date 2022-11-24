@@ -1,7 +1,7 @@
 import React, {Suspense} from "react";
 import './App.css';
 import Navbar from "./Component/Navbar/Navbar";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 // import DialogsContainer from "./Component/Dialogs/DialogsContainer";
 import UsersContainer from "./Component/Users/UsersContainer";
 // import ProfileContainer from "./Component/Profile/ProfileContainer";
@@ -56,11 +56,11 @@ const mapStateToProps = (state) => ({
 let AppContainer =  connect (mapStateToProps, {initializedApp})(App);
 
 const TestJSApp = (props)=> {
-    return <BrowserRouter>
+    return <HashRouter basename={process.env.PUBLIC_URL}>
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default TestJSApp
